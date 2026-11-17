@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent, type ReactNode } from "react";
 import { CONFIG } from "./config";
 
-type Fact = "lt100" | "100-300" | "300-1m" | "gt1m" | "";
+type Fact = "lt300" | "300-1m" | "gt1m" | "";
 type Equipo = "yo" | "1" | "2-5" | "externo" | "";
 
 type Fields = {
@@ -32,9 +32,8 @@ const EMPTY: Fields = {
 };
 
 const FACT_OPTIONS: { value: Fact; label: string }[] = [
-  { value: "lt100", label: "Menos de 100.000 €" },
-  { value: "100-300", label: "100.000 – 300.000 €" },
-  { value: "300-1m", label: "300.000 € – 1 M€" },
+  { value: "lt300", label: "Menos de 300.000 €" },
+  { value: "300-1m", label: "300.000 – 1 M€" },
   { value: "gt1m", label: "Más de 1 M€" },
 ];
 
