@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent, type R
 import { CONFIG } from "./config";
 
 type Fact = "lt300" | "300-1m" | "gt1m" | "";
-type Equipo = "yo" | "1" | "2-5" | "externo" | "";
+type Equipo = "yo" | "1" | "responsable" | "externo" | "";
 
 type Fields = {
   nombre: string;
@@ -40,7 +40,7 @@ const FACT_OPTIONS: { value: Fact; label: string }[] = [
 const EQUIPO_OPTIONS: { value: Equipo; label: string }[] = [
   { value: "yo", label: "Yo, en mis ratos libres" },
   { value: "1", label: "Una persona del equipo" },
-  { value: "2-5", label: "Un equipo de 2 a 5" },
+  { value: "responsable", label: "Responsable o equipo de marketing" },
   { value: "externo", label: "Una agencia o freelance" },
 ];
 
@@ -161,17 +161,21 @@ export default function App() {
             Agenda tu consultoría <em>estratégica</em>
           </h1>
           <p>
-            En 30 minutos miramos tus redes con lupa: qué está fallando, por qué no te traen clientes y qué tienes que
-            cambiar para que empiecen a hacerlo.
+            Es una llamada de venta de 30 minutos: nos cuentas a qué os dedicáis y qué os frena hoy, y vemos si podemos
+            ayudaros.
           </p>
           <ul className="cbf-promise">
             <li>
               <Check />
-              Diagnóstico de tu perfil y tu contenido
+              Charlamos sobre tu negocio y tu situación actual
             </li>
             <li>
               <Check />
-              Los cambios que más impacto tendrían
+              Te decimos qué servicio encaja con vosotros
+            </li>
+            <li>
+              <Check />
+              Si encajamos, te damos tarifas
             </li>
             <li>
               <Check />
